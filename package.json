@@ -7,7 +7,8 @@
     "start": "ts-node-dev --respawn --transpile-only src/index.ts",
     "build": "npm run clean && tsc && node node_modules/copyfiles/copyfiles package.json ./lib && node node_modules/copyfiles/copyfiles arena.env ./lib && node node_modules/copyfiles/copyfiles -u 1 src/static/* ./lib",
     "clean": "node node_modules/rimraf/bin lib",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "export": "npx schema-codegen src/rooms/02-state-handler.ts --csharp --output D:/Unity/Project/Cources/HW_1/HW_1_1/Assets/Scripts/generated"
   },
   "engines": {
     "node": ">=14.x"
